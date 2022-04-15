@@ -13,11 +13,11 @@
     <img src="../assets/img/logo.png">
   </header>
   <div class="menu">
-    <a href="../index.html">Listagem</a>
+    <a id="goHome" href="../index.html">Listagem</a>
     <a href="./form.html">Cadastrar</a>
   </div>
   <section>
-    <form class="formulario">
+    <form class="formulario" onsubmit="testaFormulario(event)">
       <div class="linha-formulario">
         <label class="label-grande" for="name">Nome:</label>
         <input name='name' id="name" required type="text" />
@@ -31,10 +31,10 @@
       <div class="linha-formulario xp-line" style="display: flex;">
         <label class="label-grande">Experiência Prévia:</label>
         <div>
-          <input name='xp' id="xp-yes" required type="radio" />
+          <input name='xp' id="xp-yes" value="true" required type="radio" />
           <label for="xp-yes">Sim</label>
           <br />
-          <input name='xp' id="xp-no" required type="radio" />
+          <input name='xp' id="xp-no" value="false" required type="radio" />
           <label for="xp-no">Não</label>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <input type="submit" value="Salvar" />
     </form>
   </section>
-
+  <script src="../assets/js/form.js"> </script>
 </body>
 
 </html>
